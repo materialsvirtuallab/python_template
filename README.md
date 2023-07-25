@@ -1,2 +1,4 @@
-# python_template
-A template repository for setting up new python packages
+# Introduction
+
+This is a template for setting up Python packages in the Materials Virtual Lab. It comes with the standard Github 
+workflows, pyproject and linting.
