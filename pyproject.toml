@@ -72,10 +72,6 @@ isort.split-on-trailing-comma = false
 "__init__.py" = ["F401"]
 "tests/*" = ["D"]
 "tasks.py" = ["D"]
-"pymatgen/analysis/*" = ["D"]
-"pymatgen/vis/*" = ["D"]
-"pymatgen/io/*" = ["D"]
-"dev_scripts/*" = ["D"]
 
 [tool.pytest.ini_options]
 addopts = "--durations=30 --quiet -r xXs --color=yes -p no:warnings --import-mode=importlib"

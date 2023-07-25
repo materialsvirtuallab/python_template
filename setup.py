@@ -2,23 +2,17 @@
 
 from __future__ import annotations
 
-from setuptools import find_namespace_packages, setup
+from setuptools import setup
 
 with open("README.md") as file:
     long_description = file.read()
 
 setup(
-    name="pymatgen",
-    packages=find_namespace_packages(
-        include=["pymatgen.*", "pymatgen.analysis.*", "pymatgen.io.*", "pymatgen.ext.*", "cmd_line"],
-        exclude=["pymatgen.*.tests", "pymatgen.*.*.tests", "pymatgen.*.*.*.tests"],
-    ),
-    version="2023.7.17",
+    name="python_template",
+    version="0.0.1",
     python_requires=">=3.8",
     install_requires=[],
     extras_require={},
-    # All package data has to be explicitly defined. Do not use automated codes like last time. It adds
-    # all sorts of useless files like test files and is prone to path errors.
     package_data={},
     author="Author list",
     author_email="ongsp@ucsd.edu",
