@@ -41,8 +41,8 @@ jobs:
       - name: pytest
         run: |
           pytest --cov=package tests --color=yes
-      - name: Coveralls
-        uses: coverallsapp/github-action@v2
+#      - name: Coveralls
+#        uses: coverallsapp/github-action@v2
 
   build:
     needs: test
