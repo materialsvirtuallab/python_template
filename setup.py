@@ -2,12 +2,7 @@
 
 from __future__ import annotations
 
-import platform
-import sys
-
-import numpy as np
-from setuptools import Extension, find_namespace_packages, setup
-
+from setuptools import find_namespace_packages, setup
 
 with open("README.md") as file:
     long_description = file.read()

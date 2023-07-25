@@ -1,3 +1,1 @@
-"""
-Test fixtures for unittests.
-"""
+"""Test fixtures for unittests."""

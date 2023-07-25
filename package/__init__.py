@@ -1,3 +1,1 @@
-"""
-Root init file.
-"""
+"""Root init file."""
