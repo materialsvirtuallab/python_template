@@ -24,6 +24,7 @@ setuptools*
 .*_cache
 # VS Code
 .vscode/*
+_site
 
 # Environments
 .env

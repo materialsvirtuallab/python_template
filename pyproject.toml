@@ -76,23 +76,6 @@ isort.split-on-trailing-comma = false
 [tool.pytest.ini_options]
 addopts = "--durations=30 --quiet -r xXs --color=yes -p no:warnings --import-mode=importlib"
 
-[tool.coverage.run]
-omit = ["pymatgen/cli"]
-relative_files = true
-
-[tool.coverage.report]
-exclude_lines = [
-  "@deprecated",
-  "def __repr__",
-  "if 0:",
-  "if __name__ == .__main__.:",
-  "if self.debug:",
-  "if settings.DEBUG",
-  "pragma: no cover",
-  "raise AssertionError",
-  "raise NotImplementedError",
-]
-
 [tool.mypy]
 ignore_missing_imports = true
 namespace_packages = true
@@ -109,3 +92,22 @@ titel,alls,ans,nd,mater,nwo,te,hart,ontop,ist,ot,fo,nax,coo,coul,ser,leary,thre,
 fase,rute,reson,titels,ges,scalr,strat,struc,hda,nin,ons,pres,kno,loos,lamda,lew
 """
 check-filenames = true
+
+[tool.coverage.run]
+relative_files = true
+
+[tool.coverage.report]
+exclude_lines = [
+  "@deprecated",
+  "def __repr__",
+  "if 0:",
+  "if __name__ == .__main__.:",
+  "if self.debug:",
+  "if settings.DEBUG",
+  "pragma: no cover",
+  "raise AssertionError",
+  "raise NotImplementedError",
+  "input",
+  "if TYPE_CHECKING:",
+  "except PackageNotFoundError:"
+]
