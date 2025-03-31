@@ -5,10 +5,9 @@ description = "Template for new Python code bases in Materials Virtual Lab."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = []
-author = "Shyue Ping Ong"
-author_email = "ongsp@ucsd.edu"
-maintainer = "Shyue Ping Ong"
-maintainer_email = "ongsp@ucsd.edu"
+authors = [
+    { name = "Shyue Ping Ong", email = "ongsp@ucsd.edu" },
+]
 url = "https://materialsvirtuallab.org"
 classifiers = [
     "Development Status :: 4 - Beta",
