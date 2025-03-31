@@ -8,7 +8,6 @@ dependencies = []
 authors = [
     { name = "Shyue Ping Ong", email = "ongsp@ucsd.edu" },
 ]
-url = "https://materialsvirtuallab.org"
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Science/Research",
