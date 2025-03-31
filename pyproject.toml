@@ -1,14 +1,34 @@
-[build-system]
-requires = [
-  # pin NumPy version used in the build
-  "oldest-supported-numpy",
-  "setuptools>=65.0.0",
+[project]
+name = "python-template"
+version = "0.1.0"
+description = "Template for new Python code bases in Materials Virtual Lab."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+author = "Shyue Ping Ong"
+author_email = "ongsp@ucsd.edu"
+maintainer = "Shyue Ping Ong"
+maintainer_email = "ongsp@ucsd.edu"
+url = "https://materialsvirtuallab.org"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
-build-backend = "setuptools.build_meta"
 
-[tool.versioningit.vcs]
-method = "git"
-default-tag = "0.0.1"
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["package"]
 
 [tool.black]
 line-length = 120
@@ -110,4 +130,24 @@ exclude_lines = [
   "input",
   "if TYPE_CHECKING:",
   "except PackageNotFoundError:"
+]
+
+[dependency-groups]
+dev = [
+    "codecov-cli>=10.3.0",
+    "coverage>=7.7.1",
+    "coveralls>=4.0.1",
+    "pre-commit>=4.2.0",
+    "pytest>=8.3.5",
+    "pytest-cov>=6.0.0",
+]
+lint = [
+    "mypy>=1.15.0",
+    "pyright>=1.1.398",
+    "ruff>=0.11.2",
+]
+maintain = [
+    "docutils>=0.21.2",
+    "invoke>=2.2.0",
+    "sphinx>=8.1.3",
 ]
