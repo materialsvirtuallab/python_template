@@ -27,20 +27,19 @@ jobs:
       PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION: "python"
 
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - name: Install uv.
+        uses: astral-sh/setup-uv@v5
         with:
-          python-version: ${{ matrix.python-version }}
-          cache: pip
-          cache-dependency-path: '**/requirements.txt'
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
       - name: Install dependencies
         run: |
-          pip install --quiet -r requirements.txt -r requirements-ci.txt
-          pip install -e .
+          uv sync
+          uv pip install -e .
       - name: pytest
         run: |
-          pytest --cov=package tests --color=yes
+          uv run pytest --cov=package tests --color=yes
 #      - name: Upload coverage reports to Codecov
 #        uses: codecov/codecov-action@v3
 #        env:
